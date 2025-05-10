@@ -30,11 +30,11 @@ def get_latest_news():
             source=article["source"]["name"]
             published=article["publishedAt"]
             url=article["url"]
-            message=f"🗞️ *{title}*\n📍{source} | 🕒 {published}\n🔗 {url}"
+            message=f" *{title}*\n {source} |  {published}\n {url}"
             messages.append(message)
         return "\n\n".join(messages)
     else:
-        return  "⚠️ No recent news found on India Pakistan conflict."
+        return  " No recent news found on India Pakistan conflict."
     
 def send_whatsapp_message(message):
     client.messages.create(
